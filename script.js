@@ -7,7 +7,7 @@ function listeners(){
     const buttonFrame = document.getElementById("buttonFrame");
 
     voirCv.addEventListener("mouseover", () => {
-        voirCv.textContent = "Presque ☺️";
+        voirCv.textContent = "Presque 😃";
         voirCv.style.backgroundColor = "rgba(62, 94, 72, 0.5)";
     });
 
@@ -17,7 +17,7 @@ function listeners(){
     });
 
     voirCv.addEventListener("click", () => {
-        voirCv.textContent = "Ça charge ...";
+        voirCv.textContent = "LET'S GO 🚀🚀🚀";
         voirCv.style.backgroundColor = "rgba(62, 94, 72, 1)";
         setTimeout(() => {
             window.location.href = "cv.html";

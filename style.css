@@ -1,11 +1,3 @@
-body{
-    background-color: #FEEAA1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 @keyframes slideInTop {
     0% {
         transform: translateY(-100%);
@@ -16,6 +8,38 @@ body{
     100% {
         transform: translateY(0);
     }
+}
+@keyframes slideInBottomFirst {
+    0% {
+        transform: translateY(100%);
+    }
+    70% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottomSecond {
+    0% {
+        transform: translateY(150%);
+    }
+    70% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#homeBody{
+    background-color: #FEEAA1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 #topFrame{
@@ -69,30 +93,6 @@ body{
     height: max-content;
 }
 
-@keyframes slideInBottomFirst {
-    0% {
-        transform: translateY(100%);
-    }
-    70% {
-        transform: translateY(-10%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInBottomSecond {
-    0% {
-        transform: translateY(150%);
-    }
-    70% {
-        transform: translateY(-10%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
 #buttonFrame{
     width: 90%;
     max-width: 400px;
@@ -124,6 +124,146 @@ body{
     width: 80%;
 }
 
+
+
+
+
+#cvBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer{
+    width: 375px;
+    height: 812px;
+    background-color: #FEEAA1;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#leftContainer{
+    background-color: #3E5E4B;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#shapeFrame{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 152px;
+    background-color: #FEEAA1;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+}
+
+#diopPicture{
+    position: absolute;
+    left: 25%;
+    top: 4%;
+    z-index: 3;
+    width: 50%;
+    height: auto;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 100px 100px 100px 0px;
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+#leftVerticalLine{
+    width: 1px;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    left: 10%;
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+.littleShapeLeft{
+    width: 7px;
+    height: 21px;
+    background-color: #FEEAA1;
+    border-radius: 100px;
+    position: absolute;
+    left: 8%;
+}
+
+#contactShape{
+    top: 18%;
+}
+
+.littleCircleLeft{
+    width: 5px;
+    height: 5px;
+    clip-path: circle(40%);
+    position: absolute;
+    left: 8.8%;
+    background-color: #FEEAA1;
+}
+
+#phoneCircle{
+    top: 22%;
+}
+
+#githubCircle{
+    top: 25%;
+}
+
+#linkedinCircle{
+    top: 28%;
+}
+
+#mailCircle{
+    top: 31%;
+}
+
+#locationCircle{
+    top: 34%;
+}
+
+#contactFrame{
+    position: absolute;
+    display: flex;
+    gap: 8.5px;
+    flex-direction: column;
+    left: 15%;
+    top: 18%;
+    width: 80%;
+    height: auto;
+}
+
+.contactText{
+    font-size: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#mail{
+    overflow-wrap: break-word;
+    max-width: 100px;
+}
+
+.leftIcones{
+    color: white;
+    margin-right: 5px;
+}
+
+#rightContainer{
+    background-color: black;
+}
+
 @media (max-aspect-ratio: 1/1){
     #buttonFrame{
         position: fixed;
@@ -134,3 +274,27 @@ body{
         animation-timing-function: ease-out;
     }
 }
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #FEEAA1;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: darkkhaki;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
