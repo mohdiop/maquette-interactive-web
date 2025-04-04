@@ -1,0 +1,68 @@
+body{
+    background-color: #FEEAA1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#topFrame{
+    width: 60%;
+    height: auto;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 400px;
+    max-height: 400px;
+    background-color: #3E5E4B;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jef{
+    width: 80%;
+    aspect-ratio: 2/1.5;
+    border-radius: 10%;
+    margin: 10%;
+    object-fit: cover;
+}
+
+.text{
+    color: #0B2927;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#firstText{
+    font-size: 1.7em;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+#secondText{
+    font-size: 1em;
+    margin-top: 40%;
+    margin-bottom: 10%;
+}
+
+#bottomFrame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+#voirCv{
+    width: 120%;
+    height: 48px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    background-color: #3E5E4B;
+    border-radius: 32px;
+    padding: 5%;
+    color: white;
+    font-size: 1.2em;
+}
