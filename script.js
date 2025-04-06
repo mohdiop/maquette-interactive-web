@@ -3,24 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function listeners(){
-    const voirCv = document.getElementById("voirCv");
-    const buttonFrame = document.getElementById("buttonFrame");
+    if(document.getElementById("cvBody") == null){
+        const voirCv = document.getElementById("voirCv");
+        const buttonFrame = document.getElementById("buttonFrame");
 
-    voirCv.addEventListener("mouseover", () => {
-        voirCv.textContent = "Presque 😃";
-        voirCv.style.backgroundColor = "rgba(62, 94, 72, 0.5)";
-    });
+        voirCv.addEventListener("mouseover", () => {
+            voirCv.textContent = "Presque 😃";
+            voirCv.style.backgroundColor = "rgba(62, 94, 72, 0.5)";
+        });
 
-    voirCv.addEventListener("mouseout", () => {
-        voirCv.textContent = "Voir mon CV";
-        voirCv.style.backgroundColor = "rgba(62, 94, 72, 1)";
-    });
+        voirCv.addEventListener("mouseout", () => {
+            voirCv.textContent = "Voir mon CV";
+            voirCv.style.backgroundColor = "rgba(62, 94, 72, 1)";
+        });
 
-    voirCv.addEventListener("click", () => {
-        voirCv.textContent = "LET'S GO 🚀🚀🚀";
-        voirCv.style.backgroundColor = "rgba(62, 94, 72, 1)";
-        setTimeout(() => {
-            window.location.href = "cv.html";
-        }, 1000);
-    });
+        voirCv.addEventListener("click", () => {
+            voirCv.textContent = "LET'S GO 🚀🚀🚀";
+            voirCv.style.backgroundColor = "rgba(62, 94, 72, 1)";
+            setTimeout(() => {
+                window.location.href = "cv.html";
+            }, 1000);
+        });
+    }
 }
