@@ -28,6 +28,15 @@ function listeners(){
         const homeButton = document.getElementById("homeButton");
         const colorButton = document.getElementById("colorButton");
         const downloadButton = document.getElementById("downloadButton");
+        const cv = document.getElementById("mainContainer");
+        let isVisibleColorZone = false;
+        const mainColor = document.getElementById("mainColor");
+        const leftContainer = document.getElementById("leftContainer");
+        const aboutMeIcone = document.getElementById("aboutMeIcone");
+        const experienceIcone = document.getElementById("experienceIcone");
+        const skillIcone = document.getElementById("skillIcone");
+        const languageIcone = document.getElementById("languageIcone");
+        const nameBackShape = document.getElementById("nameBackShape");
         
         homeButton.addEventListener("click", () => {
             window.location.href = "index.html";
@@ -44,8 +53,23 @@ function listeners(){
         });
 
         colorButton.addEventListener("click", () => {
-            window.location.href = "index.html";
-        })
+            if(isVisibleColorZone){
+                isVisibleColorZone = false;
+                mainColor.style.display = "none";
+            } else {
+                isVisibleColorZone = true;
+                mainColor.style.display = "block";
+            }
+        });
+
+        mainColor.addEventListener("change", () => {
+            leftContainer.style.backgroundColor = mainColor.value;
+            nameBackShape.style.backgroundColor = mainColor.value;
+            aboutMeIcone.style.backgroundColor = mainColor.value;
+            experienceIcone.style.backgroundColor = mainColor.value;
+            skillIcone.style.backgroundColor = mainColor.value;
+            languageIcone.style.backgroundColor = mainColor.value;
+        });
 
         colorButton.addEventListener("mouseout", () => {
             colorButton.style.backdropFilter = "none";
@@ -58,8 +82,15 @@ function listeners(){
         });
 
         downloadButton.addEventListener("click", () => {
-            window.location.href = "index.html";
-        })
+            var opt = {
+                margin: 1,
+                filename: 'Mohamed Diop - CV.pdf',
+                image: { type: 'jpeg', quality: 2},
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'px', format: 'a4', orientation: 'portrait', precision: 100 },
+              };
+              html2pdf().set(opt).from(cv).save();
+        });
 
         downloadButton.addEventListener("mouseout", () => {
             downloadButton.style.backdropFilter = "none";

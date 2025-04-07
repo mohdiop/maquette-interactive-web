@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Diop - CV</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body id="cvBody">
     <div id="buttonsFrame">
@@ -12,10 +13,15 @@
         <button id="colorButton" class="mainButton"><img src="icones/palette-line.svg" alt="Changer la couleur principale" class="mainIcones" title="Changer la couleur principale"></button>
         <button id="downloadButton" class="mainButton"><img src="icones/download-2-line.svg" alt="Télécharger le CV en PDF" class="mainIcones" title="Télécharger le CV en PDF"></button>
     </div>
+    <div id="colorZone">
+        <form>
+            <input type="color" id="mainColor" name="mainColor" value="#3E5E4B">
+        </form>
+    </div>
     <div id="mainContainer">
         <div id="leftContainer">
             <div id="triangleFrame"></div>
-            <img src="diop.jpg" alt="Photo de profil de Mohamed Diop" id="diopPicture">
+            <img src="diop.jpg" alt="Photo de profil de Mohamed Diop" id="diopPicture" crossorigin="anonymous">
             <div id="leftVerticalLine"></div>
             <div id="contactShape" class="littleShapeLeft"></div>
             <div id="phoneCircle" class="littleCircleLeft"></div>
@@ -107,13 +113,19 @@
             <div id="nameBackShape"></div>
             <div id="rightVerticalLine"></div>
             <div id="nameShape" class="littleShapeRight"></div>
+            <div id="aboutMeShape" class="littleShapeRight"></div>
+            <div id="experienceShape" class="littleShapeRight"></div>
+            <div id="skillShape" class="littleShapeRight"></div>
+            <div id="languageShape" class="littleShapeRight"></div>
+            <div id="odcCircle" class="littleCircleRight"></div>
+            <div id="epspCircle" class="littleCircleRight"></div>
             <div id="nameFrame">
                 <div id="completeName">MOHAMED <span id="lastName">DIOP</span></div>
                 <div id="position">Ingénieur en Développement Logiciel</div>
             </div>
             <div id="aboutMeFrame">
                 <div class="rightText rightTitleText">
-                    <img src="icones/account-circle-fill.svg" alt="Icône à propos de moi" class="rightIcones">
+                    <img src="icones/account-circle-fill.svg" alt="Icône à propos de moi" class="rightIcones" id="aboutMeIcone">
                     <b>À PROPOS DE MOI</b>
                 </div>
                 <div class="rightText">Ingénieur logiciel spécialisé en développement Android Natif. 
@@ -122,7 +134,7 @@
             </div>
             <div id="experienceFrame">
                 <div class="rightText rightTitleText">
-                    <img src="icones/briefcase-2-fill.svg" alt="Icône expériences" class="rightIcones">
+                    <img src="icones/briefcase-2-fill.svg" alt="Icône expériences" class="rightIcones" id="experienceIcone">
                     <b>EXPÉRIENCES</b>
                 </div>
                 <div class="rightText experienceStyle">
@@ -151,7 +163,7 @@
             </div>
             <div id="skillsFrame">
                 <div class="rightText rightTitleText">
-                    <img src="icones/verified-badge-fill.svg" alt="Icône compétences" class="rightIcones">
+                    <img src="icones/verified-badge-fill.svg" alt="Icône compétences" class="rightIcones" id="skillIcone">
                     <b>COMPÉTENCES</b>
                 </div>
                 <div id="skillSets">
@@ -191,7 +203,7 @@
             </div>
             <div id="languageFrame">
                 <div class="rightText rightTitleText">
-                    <img src="icones/global-fill.svg" alt="Icône compétences" class="rightIcones">
+                    <img src="icones/global-fill.svg" alt="Icône compétences" class="rightIcones" id="languageIcone">
                     <b>LANGUES</b>
                 </div>
                 <div id="languageSets">
@@ -219,6 +231,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
