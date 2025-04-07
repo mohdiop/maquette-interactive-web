@@ -33,6 +33,27 @@
     }
 }
 
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-60%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleWithBounce{
+    0% {
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /*--------------- Stylisation de la page d'accueil ----------------*/
 
 #homeBody{
@@ -132,14 +153,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    flex-direction: column;
     background-color: beige;
+    margin: 0;
+}
+
+#buttonsFrame{
+    display: flex;
+    flex-direction: row;
+    gap: 8vw;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+    z-index: 4;
+    backdrop-filter: blur(10px);
+}
+
+.mainIcones{
+    margin: 11px;
+}
+
+.mainButton{
+    clip-path: circle(40%);
+    border-width: 0px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    animation: scaleWithBounce 1s ease-out;
 }
 
 #mainContainer{
     width: 375px;
     height: 812px;
-    background-color: #FEEAA1;
     display: grid;
+    margin-top: 72px;
     grid-template-columns: 40% 60%;
 }
 
@@ -153,7 +205,7 @@
     position: relative;
 }
 
-#shapeFrame{
+#triangleFrame{
     position: absolute;
     left: 0;
     top: 0;
@@ -375,6 +427,261 @@
 
 #rightContainer{
     background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#nameBackShape{
+    position: absolute;
+    top: 2%;
+    width: 100%;
+    height: 9.1%;
+    background-color: rgba(62, 94, 72, 0.65);
+    animation: slideInLeft 750ms ease-out;
+}
+
+#rightVerticalLine{
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 10%;
+    background-color: black;
+}
+
+.littleShapeRight{
+    width: 7px;
+    height: 21px;
+    background-color: #FEEAA1;
+    border-radius: 100px;
+    position: absolute;
+    left: 9%;
+}
+
+.littleCircleRight{
+    width: 5px;
+    height: 5px;
+    clip-path: circle(40%);
+    position: absolute;
+    left: 9.8%;
+    background-color: #FEEAA1;
+}
+
+#nameShape{
+    top: 2.7%;
+    height: 60px;
+}
+
+#nameFrame{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 16%;
+    top: 4.5%;
+}
+
+#completeName{
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#lastName{
+    color: #FEEAA1;
+}
+
+#position{
+    font-size: 0.6em;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#aboutMeFrame{
+    position: absolute;
+    left: 16%;
+    top: 13%;
+    width: 80%;
+    gap: 8px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rightIcones{
+    background-color: #3E5E4B;
+    padding: 1px;
+    border-radius: 4px;
+}
+
+.rightTitleText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+    font-size: 12px;
+}
+
+#experienceFrame{
+    position: absolute;
+    left: 16%;
+    top: 26%;
+    width: 80%;
+    gap: 8px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.experienceStyle{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#skillsFrame{
+    position: absolute;
+    left: 16%;
+    top: 57%;
+    width: 80%;
+    gap: 8px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#skillSets{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 5px;
+}
+
+#skillName{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#skillProgress{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    gap: 14px;
+}
+
+.progressBackground{
+    width: 100%;
+    height: 5px;
+    border-radius: 100px;
+    background-color: grey;
+    position: relative;
+}
+
+.progressForeground{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #FEEAA1;
+    border-radius: 100px;
+}
+
+#kotlin{
+    width: 95%;
+}
+
+#xml{
+    width: 90%;
+}
+
+#sql{
+    width: 92%;
+}
+
+#html{
+    width: 75%;
+}
+
+#css{
+    width: 80%;
+}
+
+#javascript{
+    width: 20%;
+}
+
+#figma{
+    width: 85%;
+}
+
+#languageFrame{
+    position: absolute;
+    left: 16%;
+    top: 80%;
+    width: 80%;
+    gap: 8px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#languageSets{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 5px;
+}
+
+#languageName{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#languageProgress{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    gap: 14px;
+}
+
+#french{
+    width: 95%;
+}
+
+#english{
+    width: 65%;
+}
+
+#bambara{
+    width: 100%;
+}
+
+#wolof{
+    width: 75%;
 }
 
 @media (max-aspect-ratio: 1/1){
@@ -388,6 +695,15 @@
     }
     #secondText{
         margin-top: 70%;
+    }
+}
+
+@media (min-aspect-ratio: 1/1){
+    .cvButtons{
+        margin: 16px;
+    }
+    #mainContainer{
+        margin-top: 72px;
     }
 }
 

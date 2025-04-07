@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="cvBody">
+    <div id="buttonsFrame">
+        <button id="homeButton" class="mainButton"><img src="icones/home-line.svg" alt="Retourner à la page d'accueil" class="mainIcones" title="Retourner à la page d'accueil"></button>
+        <button id="colorButton" class="mainButton"><img src="icones/palette-line.svg" alt="Changer la couleur principale" class="mainIcones" title="Changer la couleur principale"></button>
+        <button id="downloadButton" class="mainButton"><img src="icones/download-2-line.svg" alt="Télécharger le CV en PDF" class="mainIcones" title="Télécharger le CV en PDF"></button>
+    </div>
     <div id="mainContainer">
         <div id="leftContainer">
-            <div id="shapeFrame"></div>
+            <div id="triangleFrame"></div>
             <img src="diop.jpg" alt="Photo de profil de Mohamed Diop" id="diopPicture">
             <div id="leftVerticalLine"></div>
             <div id="contactShape" class="littleShapeLeft"></div>
@@ -99,7 +104,119 @@
             <div id="secondSeparator"></div>
         </div>
         <div id="rightContainer">
-            
+            <div id="nameBackShape"></div>
+            <div id="rightVerticalLine"></div>
+            <div id="nameShape" class="littleShapeRight"></div>
+            <div id="nameFrame">
+                <div id="completeName">MOHAMED <span id="lastName">DIOP</span></div>
+                <div id="position">Ingénieur en Développement Logiciel</div>
+            </div>
+            <div id="aboutMeFrame">
+                <div class="rightText rightTitleText">
+                    <img src="icones/account-circle-fill.svg" alt="Icône à propos de moi" class="rightIcones">
+                    <b>À PROPOS DE MOI</b>
+                </div>
+                <div class="rightText">Ingénieur logiciel spécialisé en développement Android Natif. 
+                    Actuellement en formation pour devenir développeur fullstack web et mobile à Orange Digital Kalanso.
+                </div>
+            </div>
+            <div id="experienceFrame">
+                <div class="rightText rightTitleText">
+                    <img src="icones/briefcase-2-fill.svg" alt="Icône expériences" class="rightIcones">
+                    <b>EXPÉRIENCES</b>
+                </div>
+                <div class="rightText experienceStyle">
+                    <div>
+                        <div><strong>Développeur Fullstack Web et Mobile - Apprenant</strong></div>
+                        <div><em>Orange Digital Center - Mali</em></div>
+                        <div>Bamako, Mali</div>
+                        <div><time datetime="2025-02">Févr. 2025</time> - 
+                            <time datetime="today">Présent</time></div>
+                    </div>
+                    <div>• Formation au métier de développeur fullstack web et mobile.</div>
+                </div>
+                <div class="rightText experienceStyle">
+                    <div>
+                        <div><strong>Intégrateur Logiciel - Stagiaire</strong></div>
+                        <div><em>EPSP - Tiaret</em></div>
+                        <div>Tiaret, Algérie</div>
+                        <div><time datetime="2024-02">Févr. 2025</time> - 
+                            <time datetime="2024-04">Avr. 2024</time></div>
+                    </div>
+                    <div>
+                        <div>• Révue de la litterature pour le projet de fin d’études;</div>
+                        <div>• Intégration du logiciel DEM DZ (logiciel pour la gestion du dossier électronique médical des patients).</div>
+                    </div>
+                </div>
+            </div>
+            <div id="skillsFrame">
+                <div class="rightText rightTitleText">
+                    <img src="icones/verified-badge-fill.svg" alt="Icône compétences" class="rightIcones">
+                    <b>COMPÉTENCES</b>
+                </div>
+                <div id="skillSets">
+                    <div id="skillName" class="rightText">
+                        <div>Kotlin</div>
+                        <div>XML</div>
+                        <div>SQL</div>
+                        <div>HTML</div>
+                        <div>CSS</div>
+                        <div>JavaScript</div>
+                        <div>Figma</div>
+                    </div>
+                    <div id="skillProgress">
+                        <div class="progressBackground">
+                            <div id="kotlin" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="xml" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="sql" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="html" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="css" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="javascript" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="figma" class="progressForeground"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="languageFrame">
+                <div class="rightText rightTitleText">
+                    <img src="icones/global-fill.svg" alt="Icône compétences" class="rightIcones">
+                    <b>LANGUES</b>
+                </div>
+                <div id="languageSets">
+                    <div id="languageName" class="rightText">
+                        <div>Français</div>
+                        <div>Anglais</div>
+                        <div>Bambara</div>
+                        <div>Wolof</div>
+                    </div>
+                    <div id="languageProgress">
+                        <div class="progressBackground">
+                            <div id="french" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="english" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="bambara" class="progressForeground"></div>
+                        </div>
+                        <div class="progressBackground">
+                            <div id="wolof" class="progressForeground"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

@@ -24,5 +24,52 @@ function listeners(){
                 window.location.href = "cv.html";
             }, 1000);
         });
+    }else{
+        const homeButton = document.getElementById("homeButton");
+        const colorButton = document.getElementById("colorButton");
+        const downloadButton = document.getElementById("downloadButton");
+        
+        homeButton.addEventListener("click", () => {
+            window.location.href = "index.html";
+        })
+
+        homeButton.addEventListener("mouseout", () => {
+            homeButton.style.backdropFilter = "none";
+            homeButton.style.backgroundColor = "rgba(255,255,255,0)";
+        });
+
+        homeButton.addEventListener("mouseover", () => {
+            homeButton.style.backdropFilter = "sepia(90%)";
+            homeButton.style.backgroundColor = "#feeaa175";
+        });
+
+        colorButton.addEventListener("click", () => {
+            window.location.href = "index.html";
+        })
+
+        colorButton.addEventListener("mouseout", () => {
+            colorButton.style.backdropFilter = "none";
+            colorButton.style.backgroundColor = "rgba(255,255,255,0)";
+        });
+
+        colorButton.addEventListener("mouseover", () => {
+            colorButton.style.backdropFilter = "sepia(90%)";
+            colorButton.style.backgroundColor = "#feeaa175";
+        });
+
+        downloadButton.addEventListener("click", () => {
+            window.location.href = "index.html";
+        })
+
+        downloadButton.addEventListener("mouseout", () => {
+            downloadButton.style.backdropFilter = "none";
+            downloadButton.style.backgroundColor = "rgba(255,255,255,0)";
+        });
+
+        downloadButton.addEventListener("mouseover", () => {
+            downloadButton.style.backdropFilter = "sepia(90%)";
+            downloadButton.style.backgroundColor = "#feeaa175";
+        });
+
     }
 }
