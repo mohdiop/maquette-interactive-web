@@ -31,12 +31,7 @@ function listeners(){
         const cv = document.getElementById("mainContainer");
         let isVisibleColorZone = false;
         const mainColor = document.getElementById("mainColor");
-        const leftContainer = document.getElementById("leftContainer");
-        const aboutMeIcone = document.getElementById("aboutMeIcone");
-        const experienceIcone = document.getElementById("experienceIcone");
-        const skillIcone = document.getElementById("skillIcone");
-        const languageIcone = document.getElementById("languageIcone");
-        const nameBackShape = document.getElementById("nameBackShape");
+        setMainColor(localStorage.getItem("colorChoosen"));
         
         homeButton.addEventListener("click", () => {
             window.location.href = "index.html";
@@ -63,12 +58,8 @@ function listeners(){
         });
 
         mainColor.addEventListener("change", () => {
-            leftContainer.style.backgroundColor = mainColor.value;
-            nameBackShape.style.backgroundColor = mainColor.value;
-            aboutMeIcone.style.backgroundColor = mainColor.value;
-            experienceIcone.style.backgroundColor = mainColor.value;
-            skillIcone.style.backgroundColor = mainColor.value;
-            languageIcone.style.backgroundColor = mainColor.value;
+            setMainColor(mainColor.value);
+            localStorage.setItem("colorChoosen", mainColor.value);
         });
 
         colorButton.addEventListener("mouseout", () => {
@@ -83,11 +74,11 @@ function listeners(){
 
         downloadButton.addEventListener("click", () => {
             var opt = {
-                margin: 1,
+                margin: 0,
                 filename: 'Mohamed Diop - CV.pdf',
                 image: { type: 'jpeg', quality: 2},
                 html2canvas: { scale: 2 },
-                jsPDF: { unit: 'px', format: 'a4', orientation: 'portrait', precision: 100 },
+                jsPDF: {  },
               };
               html2pdf().set(opt).from(cv).save();
         });
@@ -103,4 +94,13 @@ function listeners(){
         });
 
     }
+}
+
+function setMainColor(color){
+    document.getElementById("leftContainer").style.backgroundColor = color;
+    document.getElementById("nameBackShape").style.backgroundColor = color;
+    document.getElementById("aboutMeIcone").style.backgroundColor = color;
+    document.getElementById("experienceIcone").style.backgroundColor = color;
+    document.getElementById("skillIcone").style.backgroundColor = color;
+    document.getElementById("languageIcone").style.backgroundColor = color;
 }

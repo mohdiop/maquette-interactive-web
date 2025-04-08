@@ -220,7 +220,7 @@
 #diopPicture{
     position: absolute;
     left: 25%;
-    top: 4%;
+    top: 3.8%;
     z-index: 3;
     width: 50%;
     height: auto;
@@ -258,7 +258,7 @@
 .littleCircleLeft{
     width: 5px;
     height: 5px;
-    clip-path: circle(40%);
+    border-radius: 100px;
     position: absolute;
     left: 8.8%;
     background-color: #FEEAA1;
@@ -466,7 +466,7 @@
 .littleCircleRight{
     width: 5px;
     height: 5px;
-    clip-path: circle(40%);
+    border-radius: 100px;
     position: absolute;
     left: 9.3%;
     background-color: #FEEAA1;
