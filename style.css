@@ -436,6 +436,18 @@
     position: relative;
 }
 
+#bottomTriangle{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 50px solid #FEEAA1;
+}
+
 #nameBackShape{
     position: absolute;
     top: 2%;
