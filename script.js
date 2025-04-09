@@ -32,6 +32,7 @@ function listeners(){
         let isVisibleColorZone = false;
         const mainColor = document.getElementById("mainColor");
         setMainColor(localStorage.getItem("colorChoosen"));
+        mainColor.value = localStorage.getItem("colorChoosen");
         
         homeButton.addEventListener("click", () => {
             window.location.href = "index.html";
@@ -74,11 +75,17 @@ function listeners(){
 
         downloadButton.addEventListener("click", () => {
             var opt = {
-                margin: 0,
+                margin: 2,
                 filename: 'Mohamed Diop - CV.pdf',
-                image: { type: 'jpeg', quality: 2},
-                html2canvas: { scale: 2 },
-                jsPDF: {  },
+                image: { type: 'jpeg', quality: 1},
+                enableLinks: true,
+                html2canvas: { 
+                    scale: 2, 
+                    scrollY: 0,
+                    width: 375,
+                    height: 812,
+                },
+                jsPDF: { unit: 'px', format: [375,812.01], orientation: 'portrait' },
               };
               html2pdf().set(opt).from(cv).save();
         });
