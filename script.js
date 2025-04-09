@@ -75,9 +75,9 @@ function listeners(){
 
         downloadButton.addEventListener("click", () => {
             var opt = {
-                margin: 2,
+                margin: 0,
                 filename: 'Mohamed Diop - CV.pdf',
-                image: { type: 'jpeg', quality: 1},
+                image: { type: 'jpeg', quality: 2},
                 enableLinks: true,
                 html2canvas: { 
                     scale: 2, 
