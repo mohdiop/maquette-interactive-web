@@ -29,6 +29,13 @@ function listeners(){
         const colorButton = document.getElementById("colorButton");
         const downloadButton = document.getElementById("downloadButton");
         const cv = document.getElementById("mainContainer");
+        const today = new Date();
+        const todayTime = document.getElementById("today");
+
+        const isoDate = today.toISOString().split('T')[0];
+
+        todayTime.dateTime = isoDate;
+
         let isVisibleColorZone = false;
         const mainColor = document.getElementById("mainColor");
         setMainColor(localStorage.getItem("colorChoosen"));
